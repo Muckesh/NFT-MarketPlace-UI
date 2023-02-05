@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 
 import '../widgets/CustomAppBar.dart';
 import '../widgets/CustomTabBar.dart';
@@ -14,15 +15,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 4,
+      length: 5,
       child: Scaffold(
+        extendBody: true,
         backgroundColor: Color(0xff1B1B1B),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: ListView(
             children: [
               CustomAppBar(),
-              CustomTabBar(),
+              SizedBox(height: 400, child: CustomTabBar()),
             ],
           ),
         ),
