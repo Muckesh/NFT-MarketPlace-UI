@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/data/data.dart';
 import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 
 import '../tabs/games_tab.dart';
@@ -17,12 +18,17 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  // List<NFT> recent = datas.sublist(0, 6);
+  // List<NFT> trending = datas.sublist(6, 10);
+  // List<NFT> top = datas.sublist(10, 13);
+  // List<NFT> games = datas.sublist(13, 16);
+  // List<NFT> nature = datas.sublist(16, 19);
   List tabOptions = [
-    ["Recent", RecentTab()],
-    ["Trending", TrendingTab()],
-    ["Top", TopTab()],
-    ["Games", GamesTab()],
-    ["Nature", NatureTab()]
+    ["Recent", RecentTab(recent: datas.sublist(0, 6))],
+    ["Trending", TrendingTab(trending: datas.sublist(6, 10))],
+    ["Top", TopTab(top: datas.sublist(10, 13))],
+    ["Games", GamesTab(games: datas.sublist(13, 16))],
+    ["Nature", NatureTab(nature: datas.sublist(16, 19))]
   ];
   @override
   Widget build(BuildContext context) {
