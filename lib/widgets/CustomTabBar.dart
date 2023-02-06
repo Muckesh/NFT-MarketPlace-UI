@@ -1,83 +1,74 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:nft_marketplace/tabs/games_tab.dart';
+import 'package:nft_marketplace/tabs/nature_tab.dart';
+import 'package:nft_marketplace/tabs/recent_tab.dart';
+import 'package:nft_marketplace/tabs/top_tab.dart';
+import 'package:nft_marketplace/tabs/trending_tab.dart';
+
+import 'package:nft_marketplace/widgets/FrostedGlass.dart';
+import 'package:nft_marketplace/widgets/NftCard.dart';
 
 import 'CustomTab.dart';
 
 class CustomTabBar extends StatelessWidget {
-  const CustomTabBar({super.key});
+  final List tabOptions;
+  const CustomTabBar({super.key, required this.tabOptions});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        // Tab Bar
-        TabBar(
-          //splashBorderRadius: BorderRadius.circular(12),
-          indicator: BoxDecoration(
-            borderRadius: BorderRadius.circular(25),
+    return Expanded(
+      child: Column(
+        children: [
+          // Tab Bar
+          TabBar(
+            //splashBorderRadius: BorderRadius.circular(12),
+            indicator: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
 
-            // color: Colors.black,
-            border: Border.all(width: 2, color: Colors.white),
-          ),
-          isScrollable: true,
-          tabs: [
-            CustomTab(
-              icon: Icon(Icons.explore_outlined),
-              title: 'Recent',
+              // color: Colors.black,
+              border: Border.all(width: 2, color: Colors.white),
             ),
-            CustomTab(
-              icon: Icon(Icons.fire_hydrant_alt),
-              title: 'Trending',
-            ),
-            CustomTab(
-              icon: Icon(Icons.camera_alt_outlined),
-              title: 'Pictures',
-            ),
-            CustomTab(
-              icon: Icon(Icons.games_outlined),
-              title: 'Games',
-            ),
-            CustomTab(
-              icon: Icon(Icons.emoji_nature),
-              title: 'Nature',
-            ),
-          ],
-        ),
-        //tab View
-        Expanded(
-          child: TabBarView(
-            children: [
-              Container(
-                child: Center(
-                  child: Image.asset("assets/images/ape1.jpg"),
-                ),
+            isScrollable: true,
+            tabs: [
+              CustomTab(
+                icon: Icon(Icons.explore_outlined),
+                title: tabOptions[0][0],
               ),
-              Container(
-                child: Center(
-                  child: Text("Trending"),
-                ),
+              CustomTab(
+                icon: Icon(Icons.fire_hydrant_alt),
+                title: tabOptions[1][0],
               ),
-              Container(
-                child: Center(
-                  child: Text("Pictures"),
-                ),
+              CustomTab(
+                icon: Icon(Icons.camera_alt_outlined),
+                title: tabOptions[2][0],
               ),
-              Container(
-                child: Center(
-                  child: Text("Games"),
-                ),
+              CustomTab(
+                icon: Icon(Icons.games_outlined),
+                title: tabOptions[3][0],
               ),
-              Container(
-                child: Center(
-                  child: Text("Nature"),
-                ),
+              CustomTab(
+                icon: Icon(Icons.emoji_nature),
+                title: tabOptions[4][0],
               ),
             ],
           ),
-        ),
-      ],
+          const SizedBox(
+            height: 15,
+          ),
+          //tab View
+          Expanded(
+            child: TabBarView(
+              children: [
+                tabOptions[0][1],
+                tabOptions[1][1],
+                tabOptions[2][1],
+                tabOptions[3][1],
+                tabOptions[4][1],
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

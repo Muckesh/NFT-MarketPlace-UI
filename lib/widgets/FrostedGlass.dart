@@ -17,10 +17,10 @@ class FrostedGlass extends StatelessWidget {
         padding: EdgeInsets.all(2),
         child: BackdropFilter(
           filter: ImageFilter.blur(
-            sigmaX: 10,
-            sigmaY: 10,
+            sigmaX: 5,
+            sigmaY: 5,
           ),
-          child: Container(child: child),
+          child: child,
         ),
       ),
     );
