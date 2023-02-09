@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nft_marketplace/widgets/FrostGlass.dart';
 
 class CustomButtonRow extends StatelessWidget {
   const CustomButtonRow({
@@ -13,13 +14,8 @@ class CustomButtonRow extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () => Get.back(),
-          child: Container(
+          child: FrostGlass(
             padding: EdgeInsets.all(20),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.3),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            alignment: Alignment.center,
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
               size: 20,
@@ -27,13 +23,8 @@ class CustomButtonRow extends StatelessWidget {
             ),
           ),
         ),
-        Container(
+        FrostGlass(
           padding: EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: Colors.white.withOpacity(0.3),
-            borderRadius: BorderRadius.circular(25),
-          ),
-          alignment: Alignment.center,
           child: Icon(
             Icons.star_border_outlined,
             size: 20,

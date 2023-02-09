@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nft_marketplace/data/data.dart';
 import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 
-import '../tabs/games_tab.dart';
-import '../tabs/nature_tab.dart';
+import '../tabs/latest_tab.dart';
+import '../tabs/new_tab.dart';
 import '../tabs/recent_tab.dart';
 import '../tabs/top_tab.dart';
 import '../tabs/trending_tab.dart';
@@ -27,8 +27,8 @@ class _HomeScreenState extends State<HomeScreen> {
     ["Recent", RecentTab(recent: datas.sublist(0, 6))],
     ["Trending", TrendingTab(trending: datas.sublist(6, 10))],
     ["Top", TopTab(top: datas.sublist(10, 13))],
-    ["Games", GamesTab(games: datas.sublist(13, 16))],
-    ["Nature", NatureTab(nature: datas.sublist(16, 19))]
+    ["Latest", LatestTab(latest: datas.sublist(13, 16))],
+    ["New", NewTab(news: datas.sublist(16, 19))]
   ];
   @override
   Widget build(BuildContext context) {

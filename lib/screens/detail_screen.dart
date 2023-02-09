@@ -2,9 +2,11 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
 import '../widgets/CustomButtonRow.dart';
+import '../widgets/FrostGlass.dart';
 
 class NftDetailScreen extends StatelessWidget {
   final String img;
@@ -61,13 +63,7 @@ class NftDetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.3),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                  FrostedGlass(
                     child: Text(
                       "5.7 k\nOwners",
                       style: TextStyle(
@@ -77,16 +73,26 @@ class NftDetailScreen extends StatelessWidget {
                       ),
                     ),
                   ),
+                  // Container(
+                  //   padding:
+                  //       EdgeInsets.symmetric(horizontal: 30.0, vertical: 20),
+                  //   decoration: BoxDecoration(
+                  //     color: Colors.white.withOpacity(0.5),
+                  //     borderRadius: BorderRadius.circular(12),
+                  //   ),
+                  //   child: Text(
+                  //     "5.7 k\nOwners",
+                  //     style: TextStyle(
+                  //       color: Colors.white,
+                  //       fontSize: 24,
+                  //       fontWeight: FontWeight.bold,
+                  //     ),
+                  //   ),
+                  // ),
                   SizedBox(
                     height: 20,
                   ),
-                  Container(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 40.0, vertical: 20),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.3),
-                      borderRadius: BorderRadius.circular(12),
-                    ),
+                  FrostedGlass(
                     child: Text(
                       "${price}\nETH",
                       style: TextStyle(
@@ -99,25 +105,28 @@ class NftDetailScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SlideAction(
-              sliderRotate: false,
-              sliderButtonYOffset: 9.6,
-              height: 100,
-              onSubmit: () {},
-              borderRadius: 30,
-              innerColor: Colors.white.withOpacity(0.7),
-              outerColor: Colors.white.withOpacity(0.3),
-              sliderButtonIconPadding: 2,
-              sliderButtonIcon: Image.asset(
-                "assets/images/eth.png",
-                height: 70,
-                width: 70,
-              ),
-              text: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMake Collection Bid",
-              textStyle: const TextStyle(
-                color: Colors.black54,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            FrostGlass(
+              padding: EdgeInsets.zero,
+              child: SlideAction(
+                sliderRotate: false,
+                sliderButtonYOffset: 9.6,
+                height: 100,
+                onSubmit: () {},
+                borderRadius: 30,
+                innerColor: Colors.white.withOpacity(0.7),
+                outerColor: Colors.transparent,
+                sliderButtonIconPadding: 2,
+                sliderButtonIcon: Image.asset(
+                  "assets/images/eth.png",
+                  height: 70,
+                  width: 70,
+                ),
+                text: "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tMake Collection Bid",
+                textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
             // Container(

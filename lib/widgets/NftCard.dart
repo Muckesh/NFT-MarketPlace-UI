@@ -3,6 +3,9 @@ import 'package:get/get.dart';
 
 import 'package:nft_marketplace/screens/detail_screen.dart';
 
+import 'FrostGlass.dart';
+import 'FrostedGlass.dart';
+
 class NftCard extends StatelessWidget {
   final String img;
   final double price;
@@ -79,26 +82,27 @@ class NftCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                Container(
-                  padding: EdgeInsets.all(2),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
-                    borderRadius: BorderRadius.circular(30),
-                  ),
-                  alignment: Alignment.topRight,
-                  child: Image.asset(
-                    "assets/images/eth.png",
-                    height: 70,
-                    width: 70,
-                  ),
-                ),
-                // FrostedGlass(
+                // Container(
+                //   padding: EdgeInsets.all(2),
+                //   decoration: BoxDecoration(
+                //     color: Colors.white.withOpacity(0.7),
+                //     borderRadius: BorderRadius.circular(30),
+                //   ),
+                //   alignment: Alignment.topRight,
                 //   child: Image.asset(
                 //     "assets/images/eth.png",
                 //     height: 70,
                 //     width: 70,
                 //   ),
                 // ),
+                FrostGlass(
+                  padding: EdgeInsets.zero,
+                  child: Image.asset(
+                    "assets/images/eth.png",
+                    height: 70,
+                    width: 70,
+                  ),
+                ),
               ],
             ),
             Container(
