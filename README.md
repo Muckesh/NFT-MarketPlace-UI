@@ -1,15 +1,23 @@
-# nft_marketplace
+# Flutter NFT Marketplace UI
 
 A new Flutter project.
 
-## Getting Started
+##  Flutter NFT Marketplace UI
 
-This project is a starting point for a Flutter application.
+https://github.com/Muckesh/NFT-MarketPlace-UI/blob/main/assets/images/NFTMarketPlaceUI.mp4
 
-A few resources to get you started if this is your first Flutter project:
+# Screenshots
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<img src="https://github.com/Muckesh/NFT-MarketPlace-UI/blob/main/assets/images/Screenshot1.png" width="328"/>
+
+<img src="https://github.com/Muckesh/NFT-MarketPlace-UI/blob/main/assets/images/Screenshot2.png" width="328"/>
+
+<img src="https://github.com/Muckesh/NFT-MarketPlace-UI/blob/main/assets/images/Screenshot3.png" width="328"/>
+
+
+
+
+
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
