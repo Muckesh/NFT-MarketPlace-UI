@@ -1,8 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
 class FrostGlass extends StatelessWidget {
   final child;
@@ -14,15 +12,11 @@ class FrostGlass extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(20),
       child: Container(
-        // height: 100,
-        decoration: BoxDecoration(
-          boxShadow: const [
+        decoration: const BoxDecoration(
+          boxShadow: [
             BoxShadow(
-              // color: Color(0xffDDDDDD),
               color: Colors.white54,
               blurRadius: 6.0,
-              // spreadRadius: 2.0,
-              // offset: Offset(0.0, 0.0),
             )
           ],
         ),

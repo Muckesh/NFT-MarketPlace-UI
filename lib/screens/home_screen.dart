@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nft_marketplace/data/data.dart';
-import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 
 import '../tabs/latest_tab.dart';
 import '../tabs/new_tab.dart';
@@ -36,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       length: tabOptions.length,
       child: Scaffold(
         extendBody: true,
-        backgroundColor: Color(0xff1B1B1B),
+        backgroundColor: const Color(0xff1B1B1B),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(

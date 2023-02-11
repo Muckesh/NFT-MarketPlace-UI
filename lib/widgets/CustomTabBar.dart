@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:nft_marketplace/tabs/latest_tab.dart';
-import 'package:nft_marketplace/tabs/new_tab.dart';
-import 'package:nft_marketplace/tabs/recent_tab.dart';
-import 'package:nft_marketplace/tabs/top_tab.dart';
-import 'package:nft_marketplace/tabs/trending_tab.dart';
-
-import 'package:nft_marketplace/widgets/FrostedGlass.dart';
-import 'package:nft_marketplace/widgets/NftCard.dart';
 
 import 'CustomTab.dart';
 
@@ -32,23 +24,23 @@ class CustomTabBar extends StatelessWidget {
             isScrollable: true,
             tabs: [
               CustomTab(
-                icon: Icon(FontAwesomeIcons.compass),
+                icon: const Icon(FontAwesomeIcons.compass),
                 title: tabOptions[0][0],
               ),
               CustomTab(
-                icon: Icon(FontAwesomeIcons.fire),
+                icon: const Icon(FontAwesomeIcons.fire),
                 title: tabOptions[1][0],
               ),
               CustomTab(
-                icon: Icon(Icons.camera_alt_outlined),
+                icon: const Icon(Icons.camera_alt_outlined),
                 title: tabOptions[2][0],
               ),
               CustomTab(
-                icon: Icon(Icons.games_outlined),
+                icon: const Icon(Icons.games_outlined),
                 title: tabOptions[3][0],
               ),
               CustomTab(
-                icon: Icon(Icons.emoji_nature),
+                icon: const Icon(Icons.emoji_nature),
                 title: tabOptions[4][0],
               ),
             ],

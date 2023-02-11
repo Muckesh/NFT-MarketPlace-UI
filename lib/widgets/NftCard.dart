@@ -3,9 +3,6 @@ import 'package:get/get.dart';
 
 import 'package:nft_marketplace/screens/detail_screen.dart';
 
-import 'FrostGlass.dart';
-import 'FrostedGlass.dart';
-
 class NftCard extends StatelessWidget {
   final String img;
   final double price;
@@ -66,13 +63,13 @@ class NftCard extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "${price} ETH",
-                        style: TextStyle(
+                        "$price ETH",
+                        style: const TextStyle(
                             color: Colors.white,
                             fontSize: 24,
                             fontWeight: FontWeight.bold),
                       ),
-                      Text(
+                      const Text(
                         "Floor Price",
                         style: TextStyle(
                           color: Colors.white,
@@ -82,21 +79,13 @@ class NftCard extends StatelessWidget {
                     ],
                   ),
                 ),
-                // Container(
-                //   padding: EdgeInsets.all(2),
-                //   decoration: BoxDecoration(
-                //     color: Colors.white.withOpacity(0.7),
-                //     borderRadius: BorderRadius.circular(30),
-                //   ),
-                //   alignment: Alignment.topRight,
-                //   child: Image.asset(
-                //     "assets/images/eth.png",
-                //     height: 70,
-                //     width: 70,
-                //   ),
-                // ),
-                FrostGlass(
-                  padding: EdgeInsets.zero,
+                Container(
+                  padding: const EdgeInsets.all(2),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  alignment: Alignment.topRight,
                   child: Image.asset(
                     "assets/images/eth.png",
                     height: 70,
@@ -112,7 +101,7 @@ class NftCard extends StatelessWidget {
                 children: [
                   Text(
                     title,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
@@ -120,7 +109,7 @@ class NftCard extends StatelessWidget {
                   ),
                   Text(
                     category,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,
                     ),

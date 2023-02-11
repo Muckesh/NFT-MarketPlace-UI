@@ -1,7 +1,5 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:nft_marketplace/widgets/FrostedGlass.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
@@ -38,12 +36,12 @@ class NftDetailScreen extends StatelessWidget {
             ),
             Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.white,
                 fontSize: 50,
               ),
             ),
-            Text(
+            const Text(
               "Collection",
               style: TextStyle(
                 color: Colors.white,
@@ -63,7 +61,7 @@ class NftDetailScreen extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  FrostedGlass(
+                  const FrostedGlass(
                     child: Text(
                       "5.7 k\nOwners",
                       style: TextStyle(
@@ -89,13 +87,13 @@ class NftDetailScreen extends StatelessWidget {
                   //     ),
                   //   ),
                   // ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   FrostedGlass(
                     child: Text(
-                      "${price}\nETH",
-                      style: TextStyle(
+                      "$price\nETH",
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 24,
                         fontWeight: FontWeight.bold,

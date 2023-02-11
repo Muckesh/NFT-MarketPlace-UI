@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 class NFT {
   final String img;
   final double price;
